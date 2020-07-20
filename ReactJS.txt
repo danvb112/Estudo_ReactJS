@@ -1,0 +1,15 @@
+ReactJS
+
+- O ReactJS faz o que o JS normal faz, no sentido de manipular a DOMM do HTML, mas de 
+forma mais organizada. É muito utilizado na criação de SPA(Single Page Aplication), dessa 
+forma o back-end é constuido a parte do front-end, trazendo assim mais flexibilidade na par-
+te interativa da aplicação
+
+- Dentro do arquivo index.js, existe a variável ReactDOM que vai ser utilizada uma única
+vez dentro do nosso programa, ela serve para pegar o arquivo app.js e jogar todo o conteúdo
+dentro de uma div chamada root lá no nosso html, fazendo-o renderizar.
+
+- O React é feito na base da consteução de vários componentes e um componente é a junção da
+parte visual, com a parte de código e a estilização com o css.
+
+- 
