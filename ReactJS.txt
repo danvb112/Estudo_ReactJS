@@ -12,4 +12,22 @@ dentro de uma div chamada root lá no nosso html, fazendo-o renderizar.
 - O React é feito na base da consteução de vários componentes e um componente é a junção da
 parte visual, com a parte de código e a estilização com o css.
 
-- 
+- Para podermos usar requisições para Api usamos a bibilioteca do Axios, e colocamos todos 
+os arquivos que irão fazer conexões com serviços externos na pasta services. dentro criamos
+um arquivo api.js e usamos o axios.create dentro de uma variável, dessa forma podemos de-
+finir a baseUrl da nossa api, passando-a dentro de um objeto. Assim quando formos fazer um
+get na api, só precisaremos passar o complemento da url.
+
+- O melhor lugar para se fazer chamadas a API é usando métodos do própio react, chamados de
+métodos de ciclo de vida, que são métodos que executam automaticamente baseado no ciclo de 
+de montagem do componente na tela.
+
+- O componentDidMount() é um método que vai ser executado sempre que um componente for exi-
+bido na tela, no caso, criamos uma função para poder carregar os objetos da api usando o
+async e colocamos ela dentro do componentDidMount()
+
+- Quando usamos métodos que pertencem ao própior React, devemos usalos como se fossem uma
+função normal dentro do JS, mas quando vamos criar uma função nossa, essa deve ser feita 
+no modelo de arrow function, pois dessa forma ela poderá ser acessada por meio do 'this'.
+
+-  
