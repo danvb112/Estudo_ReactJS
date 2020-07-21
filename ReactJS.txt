@@ -30,4 +30,10 @@ async e colocamos ela dentro do componentDidMount()
 função normal dentro do JS, mas quando vamos criar uma função nossa, essa deve ser feita 
 no modelo de arrow function, pois dessa forma ela poderá ser acessada por meio do 'this'.
 
--  
+- No React nós não criamos variáveis para armazenar valores, como por exemplo os valores
+que vem da api. No React nós temos o conceito de estado, e podemos criar essa variável 
+simplismente usando 'state = {}', que sempre será um objeto. E para preenchermos esse objeto
+usamos o 'this.setState({})'
+
+- O método render() fica ouvindo tudo o que acontece na variável state, então qualquer alte-
+ração feita nela, o render irá atualizar imediatamente os valores em tela. 
