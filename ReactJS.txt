@@ -37,3 +37,26 @@ usamos o 'this.setState({})'
 
 - O método render() fica ouvindo tudo o que acontece na variável state, então qualquer alte-
 ração feita nela, o render irá atualizar imediatamente os valores em tela. 
+
+- Para configurar a navegação pela nossa página instalamos uma lib chamada 'react-router-dom'
+Criamos um arquivo routes na raiz do projeto e criamos a função Routes() que determinará o
+que será exibido de acordo com o caminho que for acessado. Para isso utilizamos 3 compo-
+nentes do react-router-dom: O <BrowserRouter> vai definir que estamos acessando as rotas 
+por meio de browser; O <Switch> que permite que somente uma rota seja chamada ao mesmo tempo
+e o componente <Route> que define a rota em si, tendo como parâmetros o 'path' onde será
+colocado a rota, e o 'component' onde colocará o componente que será exibido quando a rota
+for acessada.
+
+- Para podermos especificar o produto da nossa aplicação, criamos um component product 
+dentro de um diretório especifico dentro da pasta pages, e no routes.js precisamos criar
+uma nova rota pra quando este produto especifico for acessado, especificando o id dele na 
+rota: <Route path='/products/:id' component={Product} />.
+
+- Ao fazer isso surge um problema, o react-router-dom vai exibir somente a primeira rota
+porque ao ver que a rota inicia-se com o '/', ele executa a primeira rota e deixa de executar
+a segunda, para isso nós adicionamos uma propriedade 'exact' na primeira rota, que irá dizer
+a ela que só será executada quando a rota for exatamente a rota raiz('/')
+
+- Para finalizar a Parte de navegação precisamos somente trocar a tag <a> no nosso index.js
+do main, para um componente do react-router-dom chamado <Link> e o 'href' para o 'to', 
+passando para ele o id do nosso product por meio de um Template Literals
