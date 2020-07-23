@@ -60,3 +60,12 @@ a ela que só será executada quando a rota for exatamente a rota raiz('/')
 - Para finalizar a Parte de navegação precisamos somente trocar a tag <a> no nosso index.js
 do main, para um componente do react-router-dom chamado <Link> e o 'href' para o 'to', 
 passando para ele o id do nosso product por meio de um Template Literals
+
+- Para descrever os produtos em uma página especifica pra eles, primeiro criamos uma variá-
+vel state com um product contendo um objeto vazio, e dentro do nosso 'componentDidMount()'
+usando o async, fazemos a conexão com a api dando um get e passando o '/product/${id}'. Pa-
+ra buscar esse id especifico, usamos por meio da desestruturação a instrução:
+const {id} = this.props.match.params. Depois damos um setState() para preencher o product
+com as informações vindas da api. Com as informações preenchidas, jogamos no nosso render
+da forma que quisermos.
+
